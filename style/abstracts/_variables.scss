@@ -1,0 +1,34 @@
+// Colors
+$color-red: #ff4747;
+$saturate-red: saturate(175%);
+
+$color-yellow: #ffe600;
+
+$color-blue-light: #2998ff;
+$color-blue-dark: #1179db;
+
+$color-grey-light-1: #f7f7f7;
+$color-grey-light-2: #eee;
+$color-grey-light-3: #dedede;
+$color-grey-light-4: #d0d0d0;
+
+$color-grey-dark-2: #999;
+$color-grey-dark: #777;
+$color-grey-dark-4: #555;
+$color-grey-dark-3: #333;
+
+$color-white: #fff;
+$color-black: #000;
+
+// Font
+$default-font-size: 1.6rem;
+
+// Shadows
+$card-red-shadow: 0.1rem 0.2rem 0.4rem rgba($color-black, 0.05);
+$shadow-medium: 0.2rem 0.4rem 0.8rem rgba($color-black, 0.15);
+$shadow-big: 0.25rem 1rem 1.5rem rgba($color-black, 0.2);
+
+// Borders
+$border-light-1: 0.1rem solid $color-grey-light-1;
+$border-light-2: 0.1rem solid $color-grey-light-2;
+$border-light-3: 0.1rem solid $color-grey-light-3;

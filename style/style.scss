@@ -1,0 +1,25 @@
+@import 'abstracts/mixins';
+@import 'abstracts/variables';
+
+@import 'base/base';
+@import 'base/typography';
+@import 'base/utilities';
+
+@import 'components/section-explore';
+@import 'components/section-join';
+@import 'components/section-news';
+@import 'components/section-reviews';
+@import 'components/section-stats';
+@import 'components/section-work';
+@import 'components/to-top';
+
+@import 'layout/footer';
+@import 'layout/header';
+@import 'layout/nav';
+
+@import 'pages/home';
+
+// 1. Fluid layouts
+// 2. Responsive units
+// 3. Flexible images
+// 4. Media queries

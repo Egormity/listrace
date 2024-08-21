@@ -1,0 +1,85 @@
+.reviews {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+
+  &__h1 {
+    @include heading;
+  }
+
+  &__h2 {
+    @include heading-under;
+  }
+
+  &__container {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__card {
+    opacity: 0.6;
+    box-shadow: $card-red-shadow;
+    position: relative;
+    right: 0;
+    max-width: 40rem;
+    min-width: 40rem;
+    height: fit-content;
+    padding: 4rem 2.5rem;
+    margin: 2rem;
+    transition: all 1s;
+
+    @include responsive(px600) {
+      max-width: 50rem;
+      min-width: 50rem;
+    }
+
+    &--active {
+      transition: all 1s;
+      opacity: 1;
+      border: $border-light-1;
+      box-shadow: $shadow-big;
+    }
+
+    &--top {
+      display: flex;
+      align-items: center;
+
+      &-rating {
+        margin-left: 1.5rem;
+      }
+
+      &-name {
+        font-size: 1.6rem;
+        color: $color-grey-dark-4;
+      }
+
+      &-place {
+        font-size: 1.3rem;
+        letter-spacing: 0.05rem;
+        font-weight: 400;
+        margin: 0.75rem 0;
+        text-align: left;
+      }
+
+      &-stars {
+        display: flex;
+
+        & i {
+          font-size: 1.25rem;
+          color: $color-yellow;
+        }
+
+        & i:not(:last-child) {
+          margin-right: 0.75rem;
+        }
+      }
+    }
+
+    &--bottom {
+      font-size: 1.2rem;
+      text-align: left;
+      color: $color-grey-dark-2;
+    }
+  }
+}

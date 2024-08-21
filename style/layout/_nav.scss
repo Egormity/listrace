@@ -1,0 +1,79 @@
+.nav {
+  position: fixed;
+  z-index: 10;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: $color-white;
+  width: 100vw;
+  box-shadow: $shadow-medium;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 115rem;
+    padding: 2rem 3rem;
+    transition: all 0.4s;
+
+    & a {
+      @include responsive(px600) {
+        padding: 1rem;
+        font-size: 2rem;
+      }
+    }
+
+    @include responsive(px600) {
+      padding: 1rem;
+      flex-direction: column;
+    }
+  }
+
+  &__small {
+    width: fit-content;
+
+    @include responsive(px600) {
+      width: 100%;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+  }
+
+  &__names {
+    @include responsive(px600) {
+      transition: all 0.4s;
+      flex-direction: column;
+      height: 0px;
+      opacity: 0%;
+    }
+  }
+
+  &__names--active {
+    transition: all 0.4s;
+    height: 20rem;
+    opacity: 1;
+
+    @media only screen and (max-width: 20em) {
+      height: 40rem;
+    }
+  }
+
+  &__icon {
+    font-size: 2rem;
+    border: 0.1rem solid $color-red;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    color: $color-red;
+    @include flex-center;
+    background-color: $color-white;
+    display: none;
+    cursor: pointer;
+
+    @include responsive(px600) {
+      display: block;
+    }
+  }
+}

@@ -1,0 +1,92 @@
+.join {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  &__h1 {
+    @include heading;
+    padding: 2rem;
+  }
+
+  &__h2 {
+    @include heading-under;
+    padding: 2rem;
+
+    & span {
+      font-style: italic;
+    }
+  }
+
+  &__container {
+    display: flex;
+    justify-content: center;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    box-shadow: $card-red-shadow;
+
+    transition: all 0.4s;
+
+    @include responsive(px600) {
+      flex-direction: column;
+    }
+
+    &:hover {
+      box-shadow: $shadow-big;
+    }
+
+    &--input,
+    &--btn {
+      height: 6.5rem;
+    }
+
+    &--input {
+      width: 50rem;
+      border: $border-light-2;
+      padding: 0 2.5rem;
+      font-size: $default-font-size;
+      outline: none;
+
+      &:hover {
+        box-shadow: $shadow-big;
+      }
+
+      @include responsive(px600) {
+        width: 30rem;
+      }
+
+      &::placeholder {
+        transition: all 0.1s;
+      }
+
+      &:focus::placeholder {
+        opacity: 0;
+        transition: all 0.25s;
+        transition-delay: 0.5s;
+      }
+    }
+
+    &--btn {
+      background-color: $color-red;
+      width: 20rem;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.8rem;
+      transition: 0.4s;
+
+      @include responsive(px600) {
+        width: 30rem;
+      }
+
+      &:hover {
+        filter: $saturate-red;
+      }
+
+      & a {
+        text-decoration: none;
+        color: $color-white;
+      }
+    }
+  }
+}

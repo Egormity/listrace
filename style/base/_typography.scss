@@ -1,0 +1,18 @@
+body {
+  font-family: Verdana, sans-serif;
+  font-weight: 400;
+  /* font-size: 16px; */
+  line-height: 1.7;
+  color: $color-grey-dark;
+}
+
+.listrace {
+  color: $color-black;
+  font-size: 2rem;
+  text-decoration: none;
+  font-weight: bold;
+
+  & span {
+    color: $color-red;
+  }
+}

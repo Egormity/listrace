@@ -1,0 +1,33 @@
+.to-top {
+  position: fixed;
+  right: 3rem;
+  bottom: 3rem;
+  z-index: 20;
+  font-size: 1.5rem;
+  border-radius: 50%;
+  height: 4rem;
+  width: 4rem;
+  background-color: $color-red;
+  text-decoration: none;
+  color: $color-white;
+  transition: 0.4s;
+
+  &:hover {
+    filter: $saturate-red;
+  }
+
+  & i {
+    @include absolute-center;
+    animation: to-top-animation 1s infinite running alternate-reverse;
+  }
+}
+
+@keyframes to-top-animation {
+  0% {
+    top: 40%;
+  }
+
+  100% {
+    top: 60%;
+  }
+}
